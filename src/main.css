@@ -13,12 +13,14 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card-item {
   width: 350px;
   background-color: rgb(255, 245, 226);
   border-radius: 10px;
+  margin: 0 0 20px 0;
 }
 
 .card-item h3 {
@@ -40,7 +42,7 @@ body {
   height: 300px;
   background-size: cover;
   background-position: 50% 90%;
-
+  border-radius: 10px 10px 0 0;
 }
 
 .card-text {
