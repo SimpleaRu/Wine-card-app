@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.wine-cards {
+  width: 1150px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item {
+  width: 350px;
+  background-color: rgb(255, 245, 226);
+  border-radius: 10px;
+}
+
+.card-item h3 {
+  font-family: 'Marck Script', cursive;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+  padding: 10px 0 0 0;
+  color: rgb(26, 0, 0);
+  text-align: center;
+  font-weight: normal;
+}
+
+.card-item p {
+  margin: 0 0 10px 0;
+}
+
+.card-item .card-img {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 90%;
+
+}
+
+.card-text {
+  color: rgb(83, 78, 78);
+  padding: 0 5px 5px 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+.card-text .bold-text {
+  color: rgb(26, 0, 0);
+  font-size: 13px;
+}
