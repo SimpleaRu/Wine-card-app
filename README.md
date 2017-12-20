@@ -1,4 +1,7 @@
-## LoftSchool example project
+
+# Wine-card-app
+ Приложение создается для обмена опытом и по <br>
+ выбору вин разных сортов и категорий. <br>
 
 ### Доступные команды
 
@@ -7,4 +10,3 @@
 * `npm run build` - собрать проект в папку `build`
 * `npm run test` - запустить тесты
 * `npm run codestyle` - проверить стиль кода
-# Wine-card-app
