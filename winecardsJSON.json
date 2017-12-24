@@ -1,26 +1,10 @@
 [
     {
         "name": "Cabernet Saperavi",
-        "type": "dry",
-        "colorType": "red",
-        "imgUrl": "../img/cabernet_saperavi.jpg",
-        "colorText": "Пурпурный",
-        "aromeText": "Ноты чёрной смородины",
-        "tasteText": "Сбалансированный, немного танинный",
-        "originText": "Крым, Массандра",
-        "priceText": "300",
-        "noteText": "Молодое крымское вино"
+        "imgUrl": "img/1.png"
     },
     {
         "name": "Cabernet",
-        "type": "dry",
-        "colorType": "red",
-        "imgUrl": "",
-        "colorText": "Пурпурный",
-        "aromeText": "Ноты чёрной смородины",
-        "tasteText": "Сбалансированный, немного танинный",
-        "originText": "Крым, Массандра",
-        "priceText": "300",
-        "noteText": "Молодое крымское вино"
+        "imgUrl": "img/2.png"
     }
 ]
