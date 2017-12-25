@@ -41,7 +41,7 @@
 /* 			echo "<strong>Файл успешно загружен!</strong>";
 			echo $_POST['name']; */
 			$winecardArr = file_get_contents('winecardsJSON.json');
-			echo $winecardArr;
+			print $winecardArr;
 				}
 				else{
 					// выводим сообщение об ошибке

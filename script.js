@@ -22,6 +22,14 @@ var form = document.forms.namedItem('addcard');
         }
     })
     .catch(alert); */
+    function IsJsonString(str) {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'winecardsJSON.json', true);
@@ -57,7 +65,14 @@ form.addEventListener('submit', function(ev) {
    oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
      console.log("Uploaded!");
-     console.log(JSON.parse(oReq.response));
+     if (IsJsonString(oReq.response)) {
+         var jsonResp = JSON.parse(oReq.response);
+         console.log(jsonResp);
+     }
+     else { 
+         console.warn('Ответ в сервера не JSON');
+     }
+    // console.log(oReq.response);
     } else {
       console.warn("Error " + oReq.status + " occurred when trying to upload your file");
     }
