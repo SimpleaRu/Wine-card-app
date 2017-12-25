@@ -40,13 +40,13 @@
 					make_upload($_FILES['file']);
 /* 			echo "<strong>Файл успешно загружен!</strong>";
 			echo $_POST['name']; */
+			$winecardArr = file_get_contents('winecardsJSON.json');
+			echo $winecardArr;
 				}
 				else{
 					// выводим сообщение об ошибке
 					echo "<strong>$check</strong>";  
 				}
 			}
-			$winecardArr = file_get_contents('winecardsJSON.json');
-			$data = json_decode($winecardArr);
-			echo var_dump($data[1]);
+
 		

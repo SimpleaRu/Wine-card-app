@@ -8,10 +8,10 @@
 	
 </head>
 <body>
-	<form action="functions.php" method="post" enctype="multipart/form-data">
+	<form  method="post" enctype="multipart/form-data" name="addcard">
 		<input type="file" name="file">
 		<input type="text" name="name">
-		<input type="submit" value="Загрузить файл!">
+		<input type="submit" value="Загрузить файл!" id="submit">
     </form>
 	<div class="wineContener"></div>
 
