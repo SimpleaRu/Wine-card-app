@@ -1,5 +1,5 @@
 <?php
-
+  $name = '';
   function can_upload($file){
 	// если имя пустое, значит файл не выбран
     if($file['name'] == '')
@@ -26,8 +26,8 @@
   
   function make_upload($file){	
 	// формируем уникальное имя картинки: случайное число и name
-	$name = mt_rand(0, 10000) . $file['name'];
-	copy($file['tmp_name'], 'img/' . $name);
+	$GLOBALS['name'] = mt_rand(0, 10000) . $file['name'];
+	copy($file['tmp_name'], 'img/' . $GLOBALS['name']);
 	}
 	
 	    // если была произведена отправка формы
@@ -37,16 +37,22 @@
 			
 				if($check === true){
 					// загружаем изображение на сервер
+
 					make_upload($_FILES['file']);
-/* 			echo "<strong>Файл успешно загружен!</strong>";
-			echo $_POST['name']; */
-			$winecardArr = file_get_contents('winecardsJSON.json');
-			print $winecardArr;
+
+			$winecardArrJson = file_get_contents('winecardsJSON.json');
+			$wineCardArr = json_decode($winecardArrJson);
+			$nextNum = count($wineCardArr);
+			$wineCardArr[$nextNum]->name = $_POST['nameW']; 
+			$wineCardArr[$nextNum]->imgUrl = 'img/' . $GLOBALS['name'];
+			$wineCardArr = array_values($wineCardArr);
+			$winecardArrJson = json_encode($wineCardArr);
+			file_put_contents('winecardsJSON.json', $winecardArrJson); 
+
+		//	echo var_dump($wineCardArr);
 				}
 				else{
 					// выводим сообщение об ошибке
 					echo "<strong>$check</strong>";  
 				}
 			}
-
-		

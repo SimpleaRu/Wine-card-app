@@ -1,10 +1,10 @@
 [
     {
         "name": "Cabernet Saperavi",
-        "imgUrl": "img/1.png"
+        "imgUrl": "img\/1.png"
     },
     {
         "name": "Cabernet",
-        "imgUrl": "img/2.png"
+        "imgUrl": "img\/2.png"
     }
 ]
