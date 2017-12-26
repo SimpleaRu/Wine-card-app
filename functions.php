@@ -29,7 +29,6 @@
 	$GLOBALS['name'] = mt_rand(0, 10000) . $file['name'];
 	copy($file['tmp_name'], 'img/' . $GLOBALS['name']);
 	}
-	
 	    // если была произведена отправка формы
 			if(isset($_FILES['file'])) {
 				// проверяем, можно ли загружать изображение
