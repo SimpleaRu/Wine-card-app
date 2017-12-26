@@ -91,7 +91,6 @@ fetch('../src/winecardsJSON.json') // '../src/winecardsJSON.json'
         wineWraper.innerHTML = template;
     })
     .catch(alert);
-
 /* var wineCardsJSON = JSON.stringify(wineCards);
 console.log(JSON.stringify(wineCards));
 console.log(JSON.parse(wineCardsJSON));

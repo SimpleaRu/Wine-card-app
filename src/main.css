@@ -38,6 +38,7 @@ body {
 }
 
 .card-item .card-img {
+  position: relative;
   width: 350px;
   height: 300px;
   background-size: cover;
@@ -55,4 +56,41 @@ body {
 .card-text .bold-text {
   color: rgb(26, 0, 0);
   font-size: 13px;
+}
+.card-img .wine-color {
+  position: absolute;
+  top: 103%;
+  left: 3%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.red {
+  background-color: rgb(154, 31, 73); 
+}
+.white {
+  background-color: rgb(253, 215, 81); 
+}
+.card-img .wine-raiting {
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  color: rgba(255, 245, 225, 0.8);
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  width: 35px;
+  height: 35px;
+
+}
+.card-img .wine-rating-wrapper {
+  position: absolute;
+  top: 102%;
+  left: 85%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
