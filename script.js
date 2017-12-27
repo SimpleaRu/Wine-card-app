@@ -1,5 +1,6 @@
 var wineContener = document.querySelector('.wineContener');
 var form = document.forms.namedItem('addcard');
+var fileFild = document.querySelector('#fileFild');
 var wineCardsArr;
 
 function IsJsonString(str) {
@@ -49,26 +50,35 @@ function renderCards() {
 
 renderCards();
 
-form.addEventListener('submit', function (ev) {
+form.addEventListener('submit', function (e) {
+    if (fileFild.files[0].size > 400000) {
+        console.log('file too big');
+        e.preventDefault();
+    }
+    else {
+        var oData = new FormData(form);
+        var oReq = new XMLHttpRequest();
+        oReq.open("POST", "functions.php", true);
+        oReq.onload = function (oEvent) {
+    
+            if (oReq.status == 200) {
+                console.log("Uploaded!");
+                renderCards();
+    
+                //  console.log(oReq.response);
+                //    var jsonResp = JSON.parse(oReq.response);
+                //     console.log(oReq.response); 
+            } else {
+                console.warn("Error " + oReq.status + " occurred when trying to upload your file");
+            }
+        };
+    
+        oReq.send(oData); 
+        e.preventDefault();   
+    }
+});
 
-    var oData = new FormData(form);
-    var oReq = new XMLHttpRequest();
-    oReq.open("POST", "functions.php", true);
-    oReq.onload = function (oEvent) {
+fileFild.addEventListener('change', function(e) {
+console.log(fileFild.files[0].size);
 
-        if (oReq.status == 200) {
-            console.log("Uploaded!");
-            renderCards();
-
-            //  console.log(oReq.response);
-            //    var jsonResp = JSON.parse(oReq.response);
-            //     console.log(oReq.response); 
-        } else {
-            console.warn("Error " + oReq.status + " occurred when trying to upload your file");
-        }
-    };
-
-    oReq.send(oData);
-    console.log(oData);
-    ev.preventDefault();
 });

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<form  method="post" enctype="multipart/form-data" name="addcard">
-		<input type="file" name="file">
+		<input type="file" name="file" id="fileFild">
 		<input type="text" name="nameW">
 		<input type="submit" value="Загрузить файл!" id="submit">
     </form>
