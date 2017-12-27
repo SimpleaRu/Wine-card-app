@@ -18,9 +18,14 @@ body {
 
 .card-item {
   width: 350px;
+  height: 525px;
   background-color: rgb(255, 245, 226);
   border-radius: 10px;
   margin: 0 0 20px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 0 10px 0;
+
 }
 
 .card-item h3 {
@@ -52,6 +57,11 @@ body {
   box-sizing: border-box;
   font-size: 13px;
 }
+.card-text p:last-child {
+  overflow: hidden;
+  height: 30px;
+  margin: 0;
+}
 
 .card-text .bold-text {
   color: rgb(26, 0, 0);
@@ -72,25 +82,23 @@ body {
   background-color: rgb(253, 215, 81); 
 }
 .card-img .wine-raiting {
-  margin: auto;
   text-align: center;
-  font-size: 30px;
-  color: rgba(255, 245, 225, 0.8);
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
-  right: 0;
-  width: 35px;
-  height: 35px;
-
-}
-.card-img .wine-rating-wrapper {
+  font-size: 24px;
+  color: rgb(250, 167, 1);
   position: absolute;
   top: 102%;
-  left: 85%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
+  left: 80%;
+}
+.card-item .more-info {
+  text-align: center;
+  color: rgb(250, 167, 1);
+  cursor: pointer;
+  visibility: hidden;
+}
+.card-item:hover .more-info  {
+  color: rgb(250, 167, 1);
+  visibility: visible;
+}
+.card-item .more-info:hover {
+  color: rgb(250, 121, 1);
 }
