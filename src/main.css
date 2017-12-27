@@ -102,3 +102,50 @@ body {
 .card-item .more-info:hover {
   color: rgb(250, 121, 1);
 }
+.selectors {
+  width: 1150px;
+  box-sizing: border-box;
+  padding: 5px 20px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.selectors .add-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(250, 167, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.selectors .add-button:hover {
+  background-color: rgb(250, 121, 1);
+}
+.add-button::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  background-color: white;  
+}
+.add-button::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  background-color: white;  
+ transform: rotate(90deg);
+}
+#search-string {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 2px 5px 2px 5px;
+}
+#taste-selector {
+  border-radius: 5px;
+  padding: 2px;
+}

@@ -81,7 +81,7 @@ fetch('../src/winecardsJSON.json') // '../src/winecardsJSON.json'
     // http://simplea.ru/wineCards/winecardsJSON.json
     .then(function (resp) {
     // console.log( JSON.parse(resp));
-        return resp.json(); //resp.json()
+        return resp.json(); // resp.json()
     })
     .then(function (j) {
 
