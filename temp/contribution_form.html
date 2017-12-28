@@ -11,10 +11,12 @@
       font-family: Helvetica, Arial, sans-serif;
       font-size: 14px;
     }
+
     .add-wine-form {
       width: 300px;
       background-color: rgb(255, 245, 226);
     }
+
     .add-wine-form p {
       text-align: right;
     }
@@ -23,10 +25,14 @@
 
 <body>
   <div class="add-wine-form">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data" name="addcard">
       <p>
-        <label for="formName">Название </label>
-          <input type="text" name="name" id="formName">
+        <label for="contributor">Представьтесь</label>
+        <input type="text" name="contributor" id="contributor">
+      </p>
+      <p>
+        <label for="formName">Название</label>
+        <input type="text" name="formName" id="formName">
       </p>
       <p>
         <label>красное
@@ -38,8 +44,42 @@
       </p>
       <p>
         <label for="formColorText">Цвет</label>
-          <input type="text" name="colorText" id="formColorText">
+        <input type="text" name="colorText" id="formColorText">
       </p>
+      <p>
+        <label for="aromeText">Аромат</label>
+        <input type="text" name="aromeText" id="aromeText">
+      </p>
+      <p>
+        <label for="tasteText">Вкус</label>
+        <input type="text" name="tasteText" id="tasteText">
+      </p>
+      <p>
+        <label for="originText">Происхождение</label>
+        <input type="text" name="originText" id="originText">
+      </p>
+      <p>
+        <label for="priceText">Цена &#8381;</label>
+        <input type="text" name="priceText" id="priceText">
+      </p>
+      <p>
+        <label for="rating">Рейтинг</label>
+        <input type="text" name="rating" id="rating" placeholder="0..10">
+      </p>
+      <p>
+        <label for="fileFild">выбрать фото</label>
+        <input type="file" name="file" id="fileFild">
+      </p>
+      <p>
+        <label for="noteText">Комментарии</label>
+        <textarea type="text" name="noteText" id="noteText">
+          </textarea>
+      </p>
+      <p>
+        <label for="formsubmit"></label>
+        <input type="submit" value="добавить" id="formsubmit">
+      </p>
+      <p>
     </form>
   </div>
 </body>
