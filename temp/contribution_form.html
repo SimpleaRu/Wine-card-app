@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <title>Contribution form</title>
   <style>
+    .visibility-hidden {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+    }
+
     body {
       padding: 30px 0 0 30px;
       margin: 0;
@@ -13,12 +21,92 @@
     }
 
     .add-wine-form {
-      width: 300px;
+      width: 400px;
       background-color: rgb(255, 245, 226);
+      background-image: url('teksturyfon.jpg');
+      position: relative;
+      top: 10px;
+      left: 10px;
+      box-sizing: border-box;
+      padding: 20px 30px 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.5);
+      background-position: 50px 0;
     }
 
     .add-wine-form p {
       text-align: right;
+    }
+
+    .add-wine-form p:nth-child(3) label,
+    .add-wine-form p:nth-child(4) label {
+      margin: 0 180px 0 0;
+    }
+
+    .add-wine-form p:nth-child(11),
+    .add-wine-form p:nth-child(12),
+    .add-wine-form p:nth-child(13) {
+      text-align: center;
+    }
+    .add-wine-form p:nth-child(14) {
+      text-align: right;
+    }
+    .add-wine-form p:nth-child(12) label,
+    .add-wine-form p:nth-child(14) input {
+      text-align: center;
+      padding: 7px 15px;
+      background: linear-gradient(to top, rgb(154, 31, 83) 0%, rgb(158, 60, 94) 36%, rgb(212, 95, 135) 100%);
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 1px 0 #975a4b;
+      border: 1px;
+    }
+
+    .add-wine-form label {
+      margin: 0 10px 0 0;
+      color: white;
+    }
+
+    .add-wine-form p:nth-child(12) label:hover,
+    .add-wine-form p:nth-child(14) input:hover {
+      background: linear-gradient(to top, rgb(212, 95, 135) 0%, rgb(158, 60, 94) 36%, rgb(154, 31, 83) 100%);
+    }
+
+    .add-wine-form p:nth-child(12) label:active,
+    .add-wine-form p:nth-child(14) input:active {
+      box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .add-wine-form input {
+      border-radius: 7px;
+      border: 1px solid rgb(212, 212, 212);
+    }
+    .add-wine-form p:last-child {
+      padding: 20px 0 0 0;
+    }
+    .add-wine-form input[type="text"] {
+      padding: 3px 10px;
+    }
+
+    #noteText {
+      resize: none;
+      height: 70px;
+      width: 90%;
+      border-radius: 5px;
+      margin: 10px 0 0 0;
+    }
+
+    .add-wine-form select {
+      border-radius: 5px;
+      margin: 0 150px 0 0;
+    }
+    #formClose {
+      position:absolute;
+      top: 1%;
+      left: 91%;
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -31,13 +119,15 @@
         <input type="text" name="contributor" id="contributor">
       </p>
       <p>
-        <label for="formName">Название</label>
-        <input type="text" name="formName" id="formName">
+        <label for="formName">Марка</label>
+        <input type="text" name="formName" id="formName" placeholder="Cabernet">
       </p>
       <p>
         <label>красное
           <input type="radio" name="colorType" value="red">
         </label>
+      </p>
+      <p>
         <label>белое
           <input type="radio" name="colorType" value="white">
         </label>
@@ -56,31 +146,44 @@
       </p>
       <p>
         <label for="originText">Происхождение</label>
-        <input type="text" name="originText" id="originText">
+        <input type="text" name="originText" id="originText" placeholder="Италия">
       </p>
       <p>
         <label for="priceText">Цена &#8381;</label>
         <input type="text" name="priceText" id="priceText">
       </p>
       <p>
-        <label for="rating">Рейтинг</label>
-        <input type="text" name="rating" id="rating" placeholder="0..10">
+
+        <label for="formRaiting"> Рейтинг</label>
+        <select name="formRaiting" id="formRaiting">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
       </p>
       <p>
-        <label for="fileFild">выбрать фото</label>
-        <input type="file" name="file" id="fileFild">
-      </p>
-      <p>
-        <label for="noteText">Комментарии</label>
+        <label for="noteText">Комментарии:</label>
         <textarea type="text" name="noteText" id="noteText">
           </textarea>
       </p>
       <p>
+        <label for="fileFild" class="fileFild">ВЫБЕРИТЕ ФОТО</label>
+        <input type="file" name="file" id="fileFild" class="visibility-hidden">
+      </p>
+      <p class="formFileName"></p>
+      <p>
         <label for="formsubmit"></label>
         <input type="submit" value="добавить" id="formsubmit">
       </p>
-      <p>
     </form>
+    <button type="button" id="formClose">X</button>
   </div>
 </body>
 

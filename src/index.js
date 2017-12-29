@@ -1,3 +1,4 @@
+import './normalize.css';
 import './main.css';
 const render = require('./ext.hbs');
 var wineWraper = document.querySelector('.wine-cards');
