@@ -2,83 +2,63 @@ import './normalize.css';
 import './main.css';
 const render = require('./ext.hbs');
 var wineWraper = document.querySelector('.wine-cards');
+var addCardButton = document.querySelector('.add-button');
+var addWineForm = document.querySelector('.add-wine-form-wrapper');
+var formClose = document.querySelector('#formClose');
 
-/* var wineCards = [
-    {
-        name: 'Cabernet Saperavi',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '../img/cabernet_saperavi.jpg',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-    {
-        name: 'Cabernet',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-    {
-        name: 'Saperavi',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-    {
-        name: 'Cabernet Saperavi',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '../img/cabernet_saperavi.jpg',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-    {
-        name: 'Cabernet',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-    {
-        name: 'Saperavi',
-        type: 'dry',
-        colorType: 'red',
-        imgUrl: '',
-        colorText: 'Пурпурный',
-        aromeText: 'Ноты чёрной смородины',
-        tasteText: 'Сбалансированный, немного танинный',
-        originText: 'Крым, Массандра',
-        priceText: '300',
-        noteText: 'Молодое крымское вино'
-    },
-]; */
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
 
-fetch('../src/winecardsJSON.json') // '../src/winecardsJSON.json' 
+function renderCards() {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../src/winecardsJSON.json', true);
+
+    xhr.send();
+    xhr.addEventListener('load', function () {
+        if (xhr.status != 200) {
+            console.warn(xhr.status + ': ' + xhr.statusText);
+        }
+        else {
+            if (IsJsonString(xhr.response)) {
+                var wineCardsArr = JSON.parse(xhr.response);
+                wineWraper.innerHTML = '';
+                //  console.log(result);
+                let template = render({ list: wineCardsArr });
+
+                wineWraper.innerHTML = template;
+
+            }
+            else {
+                console.warn('Ответ c сервера не JSON');
+            }
+        }
+    });
+}
+
+renderCards();
+
+addCardButton.addEventListener('click', function (e) {
+    addWineForm.style.display = 'block';
+
+});
+formClose.addEventListener('click', function (e) {
+    addWineForm.style.display = 'none';
+});
+
+document.body.addEventListener('click', function (e) {
+    if (e.target == addWineForm) {
+        addWineForm.style.display = 'none';
+    }
+});
+
+/* fetch('../src/winecardsJSON.json') // '../src/winecardsJSON.json' 
     // http://simplea.ru/wineCards/winecardsJSON.json
     .then(function (resp) {
     // console.log( JSON.parse(resp));
@@ -91,8 +71,4 @@ fetch('../src/winecardsJSON.json') // '../src/winecardsJSON.json'
 
         wineWraper.innerHTML = template;
     })
-    .catch(alert);
-/* var wineCardsJSON = JSON.stringify(wineCards);
-console.log(JSON.stringify(wineCards));
-console.log(JSON.parse(wineCardsJSON));
- */
+    .catch(alert); */

@@ -5,14 +5,22 @@ body {
   font-size: 14px;
 }
 
+.visibility-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .wine-cards {
   width: 1150px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
 }
 
@@ -21,11 +29,10 @@ body {
   height: 525px;
   background-color: rgb(255, 245, 226);
   border-radius: 10px;
-  margin: 0 0 20px 0;
+  margin: 0 20px 20px 0;
   overflow: hidden;
   box-sizing: border-box;
   padding: 0 0 10px 0;
-
 }
 
 .card-item h3 {
@@ -57,6 +64,7 @@ body {
   box-sizing: border-box;
   font-size: 13px;
 }
+
 .card-text p:last-child {
   overflow: hidden;
   height: 30px;
@@ -67,6 +75,7 @@ body {
   color: rgb(26, 0, 0);
   font-size: 13px;
 }
+
 .card-img .wine-color {
   position: absolute;
   top: 103%;
@@ -75,12 +84,15 @@ body {
   height: 20px;
   border-radius: 50%;
 }
+
 .red {
-  background-color: rgb(154, 31, 73); 
+  background-color: rgb(154, 31, 73);
 }
+
 .white {
-  background-color: rgb(253, 215, 81); 
+  background-color: rgb(253, 215, 81);
 }
+
 .card-img .wine-raiting {
   text-align: center;
   font-size: 24px;
@@ -89,19 +101,23 @@ body {
   top: 102%;
   left: 80%;
 }
+
 .card-item .more-info {
   text-align: center;
   color: rgb(250, 167, 1);
   cursor: pointer;
   visibility: hidden;
 }
-.card-item:hover .more-info  {
+
+.card-item:hover .more-info {
   color: rgb(250, 167, 1);
   visibility: visible;
 }
+
 .card-item .more-info:hover {
   color: rgb(250, 121, 1);
 }
+/* Блок с фильтрами */
 .selectors {
   width: 1150px;
   box-sizing: border-box;
@@ -109,7 +125,9 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
 }
+
 .selectors .add-button {
   position: relative;
   width: 30px;
@@ -118,9 +136,11 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .selectors .add-button:hover {
   background-color: rgb(250, 121, 1);
 }
+
 .add-button::before {
   content: "";
   width: 20px;
@@ -128,8 +148,9 @@ body {
   position: absolute;
   top: 13px;
   left: 5px;
-  background-color: white;  
+  background-color: white;
 }
+
 .add-button::after {
   content: "";
   width: 20px;
@@ -137,15 +158,190 @@ body {
   position: absolute;
   top: 13px;
   left: 5px;
-  background-color: white;  
- transform: rotate(90deg);
+  background-color: white;
+  transform: rotate(90deg);
 }
+
 #search-string {
   border-radius: 5px;
   border: 1px solid gray;
   padding: 2px 5px 2px 5px;
 }
+
 #taste-selector {
   border-radius: 5px;
   padding: 2px;
 }
+/* --- */
+
+/*  Стили формы добавления вина */
+.add-wine-form-wrapper {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 2000px;
+  height: 2000px;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+.add-wine-form {
+  width: 400px;
+  background: linear-gradient(45deg, rgb(48, 8, 22) , rgb(170, 82, 113) );
+  position: fixed;
+  top: 10px;
+  left: calc(50% - 200px);
+  box-sizing: border-box;
+  padding: 20px 30px 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-wine-form ul {
+  margin: 20px 0 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.add-wine-form li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+}
+
+.add-wine-form li:last-child {
+  margin: 0;
+}
+
+.add-wine-form #formSubmit {
+  text-align: right;
+}
+
+.add-wine-form .fileFild,
+.add-wine-form #formSubmit {
+  text-align: center;
+  padding: 7px 15px;
+  background: linear-gradient(to top, rgb(154, 31, 83) 0%, rgb(158, 60, 94) 36%, rgb(212, 95, 135) 100%);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px;
+}
+
+.add-wine-form label {
+  margin: 0 10px 0 0;
+  color: white;
+}
+
+.add-wine-form .fileFild:hover,
+.add-wine-form #formSubmit:hover {
+  background: linear-gradient(to top, rgb(212, 95, 135) 0%, rgb(158, 60, 94) 36%, rgb(154, 31, 83) 100%);
+}
+
+.add-wine-form .fileFild:active,
+.add-wine-form #formSubmit:active {
+  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.add-wine-form input {
+  border-radius: 10px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.add-wine-form input[type="text"] {
+  padding: 3px 10px;
+  width: 180px;
+}
+
+.add-wine-form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0 180px 0 0;
+}
+
+#noteText {
+  resize: none;
+  height: 70px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.add-wine-form select {
+  border-radius: 10px;
+  margin: 0 155px 0 0;
+  padding: 3px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+#formClose {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 1%;
+  left: 91%;
+  border-radius: 50%;
+  border: 1px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+#formClose::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+
+#formClose::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  background-color: white;
+  transform: rotate(-45deg);
+  border-radius: 10px;
+}
+
+.formFileName {
+  color: white;
+}
+
+#file-button {
+  text-align: center;
+}
+
+.fileFild-wraper {
+  width: 100%;
+  text-align: center;
+}
+
+.noteText-wraper {
+  width: 100%;
+}
+
+.form-titile {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+#priceText {
+  box-sizing: border-box;
+  padding: 3px 3px 3px 10px;
+  width: 201px;
+}
+/* --- */
