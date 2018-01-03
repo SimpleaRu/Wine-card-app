@@ -1,27 +1,27 @@
  {{#each list}}
 
 <div class="card-item">
-    <div class="card-img" style="background-image: url('{{imgUrl}}');" >
+    <div class="card-img" style="background-image: url('{{imgUrl}}');">
         <div class="wine-color {{colorType}}"></div>
-            <div class="wine-raiting">&#9733;{{rating}}&#9733;</div>
+        <div class="wine-raiting">&#9733;{{rating}}&#9733;</div>
     </div>
     <h3>{{name}}</h3>
     <div class="card-text">
         <p>
             <span class="bold-text">Цвет:</span>
-            Пурпурный.
+            {{colorText}}
         </p>
         <p>
             <span class="bold-text">Аромат:</span>
-            Ноты чёрной смородины.
+            {{aromeText}}
         </p>
         <p>
             <span class="bold-text">Вкус:</span>
-            Сбалансированный, немного танинный.
+            {{tasteText}}
         </p>
         <p>
             <span class="bold-text">Происхождение:</span>
-            Крым, Массандра.
+           {{originText}}
         </p>
         <p>
             <span class="bold-text">Цена:</span>
@@ -29,10 +29,7 @@
         </p>
         <p>
             <span class="bold-text">Примечание:</span>
-            Молодое крымское вино. Молодое крымское вино.
-            Молодое крымское вино. Молодое крымское вино.
-            Молодое крымское вино. Молодое крымское вино.
-            Молодое крымское вино. Молодое крымское вино.
+       {{noteText}}
         </p>
     </div>
     <p class="more-info">Подробнее...</p>

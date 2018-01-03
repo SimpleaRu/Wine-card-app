@@ -14,42 +14,16 @@
         "contributor": "Alex_Ka"
     },
     {
-        "name": "Cabernet",
+        "name": "Toso",
         "type": "dry",
-        "colorType": "white",
-        "rating": "5",
-        "imgUrl": "",
-        "colorText": "Пурпурный",
-        "aromeText": "Ноты чёрной смородины",
-        "tasteText": "Сбалансированный, немного танинный",
-        "originText": "Крым, Массандра",
-        "priceText": "300",
-        "noteText": "Молодое крымское вино"
-    },
-    {
-        "name": "Cabernet",
-        "type": "dry",
-        "colorType": "white",
-        "rating": "5",
-        "imgUrl": "",
-        "colorText": "Пурпурный",
-        "aromeText": "Ноты чёрной смородины",
-        "tasteText": "Сбалансированный, немного танинный",
-        "originText": "Крым, Массандра",
-        "priceText": "300",
-        "noteText": "Молодое крымское вино"
-    },
-    {
-        "name": "Cabernet",
-        "type": "dry",
-        "colorType": "white",
-        "rating": "5",
-        "imgUrl": "",
-        "colorText": "Пурпурный",
-        "aromeText": "Ноты чёрной смородины",
-        "tasteText": "Сбалансированный, немного танинный",
-        "originText": "Крым, Массандра",
-        "priceText": "300",
-        "noteText": "Молодое крымское вино"
+        "colorType": "red",
+        "rating": "6",
+        "imgUrl": "../img/toso.jpg",
+        "colorText": "Рубиново-пурпурный",
+        "aromeText": "Сдержанный, гармоничный",
+        "tasteText": "Сухой, немного танинный",
+        "originText": "Аргентина, Мендоза",
+        "priceText": "620",
+        "noteText": "Молодое вино с ярким вкусом "
     }
 ]

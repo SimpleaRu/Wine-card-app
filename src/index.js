@@ -7,6 +7,7 @@ var addWineForm = document.querySelector('.add-wine-form-wrapper');
 var formClose = document.querySelector('#formClose');
 var form = document.forms.namedItem('addcard');
 var fileFild = document.querySelector('#fileFild');
+var sparkling = document.querySelector('#sparkling');
 var wineCardsArr;
 
 function IsJsonString(str) {
@@ -92,4 +93,8 @@ form.addEventListener('submit', function (e) {
 fileFild.addEventListener('change', function(e) {
 console.log(fileFild.files[0].size);
 
+});
+
+sparkling.addEventListener('change', function(e) {
+    console.log(sparkling.checked);
 });

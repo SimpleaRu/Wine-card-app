@@ -1,53 +1,65 @@
 <section class="selectors">
-    <div>
-      <label>красное
-        <input type="radio" name="color"  value="red" >
-      </label>
-      <label>белое
-        <input type="radio" name="color" value="red">
-      </label>
-    </div>
-    <div>
-      <label for="taste-selector"> </label>
-      <select name="taste-selector" id="taste-selector">
-        <option>сухое</option>
-        <option>полусухое </option>
-        <option>полусладкое</option>
-        <option>сладкое</option>
-        <option>игристое</option>
-      </select>
-    </div>
-    <div>
-      <label for="search-string" class="visibility-hidden"></label>
-      <input type="text" name="search-string" id="search-string" placeholder="Введите название вина">
-    </div>
-    <div class="add-button">
-    </div>
+  <div>
+    <label>красное
+      <input type="radio" name="color" value="red">
+    </label>
+    <label>белое
+      <input type="radio" name="color" value="red">
+    </label>
+  </div>
+  <div>
+    <label for="taste-selector"> </label>
+    <select name="taste-selector" id="taste-selector">
+      <option>сухое</option>
+      <option>полусухое </option>
+      <option>полусладкое</option>
+      <option>сладкое</option>
+      <option>игристое</option>
+    </select>
+  </div>
+  <div>
+    <label for="search-string" class="visibility-hidden"></label>
+    <input type="text" name="search-string" id="search-string" placeholder="Введите название вина">
+  </div>
+  <div class="add-button">
+  </div>
 </section>
 
 <section class="wine-cards">
 </section>
 
 <section class="add-wine-form-wrapper">
- <div class="add-wine-form">
+  <div class="add-wine-form">
     <h3 class="form-titile">Добавить карту</h3>
     <form method="post" enctype="multipart/form-data" name="addcard">
       <ul>
         <li>
           <label for="contributor">Представьтесь</label>
-          <input type="text" name="contributor" id="contributor">
+          <input type="text" name="contributor" id="contributor" required>
         </li>
         <li>
           <label for="formName">Марка</label>
-          <input type="text" name="formName" id="formName" placeholder="Cabernet">
+          <input type="text" name="formName" id="formName" placeholder="Cabernet" required>
+        </li>
+        <li class="wineColor">
+          <label for="wineColor">Цвет </label>
+          <select name="wineColor" id="wineColor">
+            <option value="red">красное</option>
+            <option value="red">белое</option>
+            <option value="rose">розовое</option>
+          </select>
         </li>
         <li>
-          <label for="formRed">Красное</label>
-          <input type="radio" name="colorType" value="red" id="formRed">
-        </li>
-        <li>
-          <label for="formWhite">Белое</label>
-          <input type="radio" name="colorType" value="white" id="formWhite">
+          <label for="sugarContent">Содержание сахара</label>
+          <select name="sugarContent" id="sugarContent">
+            <option>сухое</option>
+            <option>полусухое</option>
+            <option>полусладкое</option>
+            <option>десертное полусладкое</option>
+            <option>десертное сладкое</option>
+            <option>ликерное</option>
+            <option>крепкое</option>
+          </select>
         </li>
         <li>
           <label for="formColorText">Цвет</label>
@@ -69,7 +81,7 @@
           <label for="priceText">Цена &#8381;</label>
           <input type="number" name="priceText" id="priceText">
         </li>
-        <li>
+        <li id="raiting-sparkling">
           <label for="formRaiting"> Рейтинг</label>
           <select name="formRaiting" id="formRaiting">
             <option>1</option>
@@ -83,6 +95,8 @@
             <option>9</option>
             <option>10</option>
           </select>
+          <label for="sparkling">Игристое:</label>
+          <input type="checkbox" name="sparkling" id="sparkling">
         </li>
         <li>
           <div class="noteText-wraper">
@@ -92,12 +106,9 @@
           </div>
         </li>
         <li id="file-button">
-          <div class="fileFild-wraper">
-            <label for="fileFild" class="fileFild">ВЫБРАТЬ ФОТО</label>
-            <input type="file" name="file" id="fileFild" class="visibility-hidden">
-          </div>
-        </li>
-        <li class="formFileName">
+          <label for="fileFild" class="fileFild">ВЫБРАТЬ ФОТО</label>
+          <input type="file" name="file" id="fileFild" class="visibility-hidden">
+          <p class="file-text">(jpeg, png, bmp размер до 500 KB)</p>
         </li>
         <li>
           <label for="formSubmit"></label>
