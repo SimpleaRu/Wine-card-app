@@ -93,6 +93,10 @@ body {
   background-color: rgb(253, 215, 81);
 }
 
+.rose {
+  background-color: #f864b0;;
+}
+
 .card-img .wine-raiting {
   text-align: center;
   font-size: 24px;
@@ -356,9 +360,6 @@ body {
   border: 1px solid rgb(212, 212, 212);
   width: 190px;
 }
-.add-wine-form .wineColor {
- 
-}
 
 .wineColor select {
   border-radius: 10px;
@@ -367,9 +368,11 @@ body {
   border: 1px solid rgb(212, 212, 212);
   width: 190px;
 }
+
 #raiting-sparkling {
   justify-content: flex-start;
 }
+
 #raiting-sparkling label:nth-child(1) {
   margin: 0 97px 0 0;
 }

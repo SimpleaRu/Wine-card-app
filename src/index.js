@@ -7,7 +7,7 @@ var addWineForm = document.querySelector('.add-wine-form-wrapper');
 var formClose = document.querySelector('#formClose');
 var form = document.forms.namedItem('addcard');
 var fileFild = document.querySelector('#fileFild');
-var sparkling = document.querySelector('#sparkling');
+var sugarContent = document.querySelector('#sugarContent');
 var fileFildText = document.querySelector('.file-text');
 var wineCardsArr;
 
@@ -99,6 +99,6 @@ fileFild.addEventListener('change', function (e) {
 
 });
 
-sparkling.addEventListener('change', function (e) {
-    console.log(sparkling.checked);
+sugarContent.addEventListener('change', function (e) {
+    console.log(sugarContent.value);
 });

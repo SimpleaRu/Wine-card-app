@@ -1,7 +1,7 @@
 [
     {
         "name": "Cabernet Saperavi",
-        "type": "dry",
+        "sugarContent": "dry",
         "colorType": "red",
         "rating": "7",
         "imgUrl": "../img/cabernet_saperavi.jpg",
@@ -15,7 +15,7 @@
     },
     {
         "name": "Toso",
-        "type": "dry",
+        "sugarContent": "dry",
         "colorType": "red",
         "rating": "6",
         "imgUrl": "../img/toso.jpg",
@@ -24,6 +24,7 @@
         "tasteText": "Сухой, немного танинный",
         "originText": "Аргентина, Мендоза",
         "priceText": "620",
-        "noteText": "Молодое вино с ярким вкусом "
+        "noteText": "Молодое вино с ярким вкусом ",
+        "contributor": "Alex_Ka"
     }
 ]
