@@ -8,6 +8,7 @@ var formClose = document.querySelector('#formClose');
 var form = document.forms.namedItem('addcard');
 var fileFild = document.querySelector('#fileFild');
 var sparkling = document.querySelector('#sparkling');
+var fileFildText = document.querySelector('.file-text');
 var wineCardsArr;
 
 function IsJsonString(str) {
@@ -64,6 +65,7 @@ document.body.addEventListener('click', function (e) {
 
 form.addEventListener('submit', function (e) {
     if (fileFild.files[0].size > 400000) {
+        fileFildText.innerText = 'Выберите фото до 500 KB';
         console.log('file too big');
         e.preventDefault();
     }
@@ -72,11 +74,11 @@ form.addEventListener('submit', function (e) {
         var oReq = new XMLHttpRequest();
         oReq.open("POST", "functions.php", true);
         oReq.onload = function (oEvent) {
-    
+
             if (oReq.status == 200) {
                 console.log("Uploaded!");
                 renderCards();
-    
+
                 //  console.log(oReq.response);
                 //    var jsonResp = JSON.parse(oReq.response);
                 //     console.log(oReq.response); 
@@ -84,17 +86,19 @@ form.addEventListener('submit', function (e) {
                 console.warn("Error " + oReq.status + " occurred when trying to upload your file");
             }
         };
-    
-        oReq.send(oData); 
-        e.preventDefault();   
+
+        oReq.send(oData);
+        e.preventDefault();
     }
 });
 
-fileFild.addEventListener('change', function(e) {
-console.log(fileFild.files[0].size);
+fileFild.addEventListener('change', function (e) {
+    console.log(fileFild.files[0].size);
+    console.log(fileFild.files);
+    fileFildText.innerText = fileFild.files[0].name;
 
 });
 
-sparkling.addEventListener('change', function(e) {
+sparkling.addEventListener('change', function (e) {
     console.log(sparkling.checked);
 });
