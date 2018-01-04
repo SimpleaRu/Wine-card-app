@@ -94,7 +94,8 @@ body {
 }
 
 .rose {
-  background-color: #f864b0;;
+  background-color: #f864b0;
+  ;
 }
 
 .card-img .wine-raiting {
@@ -129,25 +130,36 @@ body {
   box-sizing: border-box;
   padding: 5px 20px 0 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
+}
+
+.selectors .winesColor {
+  background-color: #fff5e2;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+}
+
+.selectors .redWine, .selectors .whiteWine {
+  margin: 0 10px 0 0;
 }
 
 .selectors .add-button {
   position: relative;
   width: 30px;
   height: 30px;
-  background-color: rgb(250, 167, 1);
+  background-color: rgb(170, 82, 113);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .selectors .add-button:hover {
-  background-color: rgb(250, 121, 1);
+  background-color: rgb(154, 31, 83);
 }
 
-.add-button::before {
+.selectors .add-button::before {
   content: "";
   width: 20px;
   height: 3px;
@@ -157,7 +169,7 @@ body {
   background-color: white;
 }
 
-.add-button::after {
+.selectors .add-button::after {
   content: "";
   width: 20px;
   height: 3px;
@@ -168,16 +180,36 @@ body {
   transform: rotate(90deg);
 }
 
-#search-string {
+.selectors #search-string {
   border-radius: 5px;
   border: 1px solid gray;
-  padding: 2px 5px 2px 5px;
+  padding: 2px 5px 2px 10px;
+  width: 170px;
+  margin: 0 10px 0 0;
+  background-color: #fff5e2;
 }
 
-#taste-selector {
-  border-radius: 5px;
-  padding: 2px;
+.selectors #taste-selector {
+  border-radius: 10px;
+  padding: 2px 5px;
+  border: 1px solid rgb(212, 212, 212);
+  margin: 0 10px 0 0;
+  background-color: #fff5e2;
 }
+
+.add-button-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #fff5e2;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.add-button-wrapper p {
+  margin: 0 5px 0 0;
+}
+
+.add-button-wrapper .add-button {}
 
 /* --- */
 

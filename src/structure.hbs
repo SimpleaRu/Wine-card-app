@@ -1,27 +1,35 @@
 <section class="selectors">
-  <div>
-    <label>красное
+  <div class="winesColor">
+    <label class="redWine">красное
       <input type="radio" name="color" value="red">
     </label>
-    <label>белое
+    <label class="whiteWine">белое
+      <input type="radio" name="color" value="red">
+    </label>
+    <label class="roseWine">розовое
       <input type="radio" name="color" value="red">
     </label>
   </div>
   <div>
-    <label for="taste-selector"> </label>
+    <label for="taste-selector" class="visibility-hidden">Содержание сахара</label>
     <select name="taste-selector" id="taste-selector">
-      <option>сухое</option>
-      <option>полусухое </option>
-      <option>полусладкое</option>
-      <option>сладкое</option>
-      <option>игристое</option>
+      <option value="dry">сухое</option>
+      <option value="semidry">полусухое</option>
+      <option value="semisweet">полусладкое</option>
+      <option value="dessertSemisweet">десертное полусладкое</option>
+      <option value="sweetDessert">десертное сладкое</option>
+      <option value="liqueur">ликерное</option>
+      <option value="strong">крепкое</option>
     </select>
   </div>
   <div>
-    <label for="search-string" class="visibility-hidden"></label>
+    <label for="search-string" class="visibility-hidden">Поиск по названию</label>
     <input type="text" name="search-string" id="search-string" placeholder="Введите название вина">
   </div>
-  <div class="add-button">
+  <div class="add-button-wrapper">
+    <p>добавить вино</p>
+    <div class="add-button" aria-label="добавить вино">
+    </div>
   </div>
 </section>
 
