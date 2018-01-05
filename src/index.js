@@ -9,9 +9,9 @@ var form = document.forms.namedItem('addcard');
 var fileFild = document.querySelector('#fileFild');
 var sugarContent = document.querySelector('#sugarContent');
 var fileFildText = document.querySelector('.file-text');
-var winesColor = document.querySelector('.winesColor');
-var colorSelector = document.getElementsByName('selectcolor');
+var colorSelector = document.querySelector('#color-selector');
 var wineCardsArr;
+var wineCardsFilter;
 
 
 function IsJsonString(str) {
@@ -21,6 +21,10 @@ function IsJsonString(str) {
         return false;
     }
     return true;
+}
+
+function checkFilter (arr, filter) {
+
 }
 
 function renderCards() {
@@ -81,6 +85,7 @@ form.addEventListener('submit', function (e) {
             if (oReq.status == 200) {
                 console.log("Uploaded!");
                 renderCards();
+                addWineForm.style.display = 'none';
 
                 //  console.log(oReq.response);
                 //    var jsonResp = JSON.parse(oReq.response);
@@ -96,8 +101,7 @@ form.addEventListener('submit', function (e) {
 });
 
 fileFild.addEventListener('change', function (e) {
-    /*     console.log(fileFild.files[0].size);
-        console.log(fileFild.files); */
+
     fileFildText.innerText = fileFild.files[0].name;
 
 });
@@ -107,6 +111,15 @@ sugarContent.addEventListener('change', function (e) {
 });
 
 /* Обработка селекторов */
-winesColor.addEventListener('click', function (e) {
-    console.log(wineCardsArr);
-});
+colorSelector.addEventListener('change', function (e) {
+    console.log(colorSelector.value);
+ 
+    wineCardsFilter = wineCardsArr.filter(function (elem) {
+        if (elem.colorType == colorSelector.value || colorSelector.value == 'any') {
+          
+            return elem;
+        }
+    });
+
+    console.log(wineCardsFilter);
+})

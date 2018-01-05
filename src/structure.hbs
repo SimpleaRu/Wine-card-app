@@ -1,18 +1,18 @@
 <section class="selectors">
   <div class="winesColor">
-    <label class="redWine">красное
-      <input type="radio" name="selectcolor" value="red" id="red-selector">
-    </label>
-    <label class="whiteWine">белое
-      <input type="radio" name="selectcolor" value="white" id="white-selector">
-    </label>
-    <label class="roseWine">розовое
-      <input type="radio" name="selectcolor" value="rose" id="rose-selector">
-    </label>
+    <label for="color-selector" class="visibility-hidden">Содержание сахара</label>
+    <select name="color-selector" id="color-selector">
+      <option value="any">цвет</option>
+      <option value="red">красное</option>
+      <option value="white">белое</option>
+      <option value="rose">розовое</option>
+
+    </select>
   </div>
   <div>
     <label for="taste-selector" class="visibility-hidden">Содержание сахара</label>
     <select name="taste-selector" id="taste-selector">
+      <option value="any">сладость / крепость</option>
       <option value="dry">сухое</option>
       <option value="semidry">полусухое</option>
       <option value="semisweet">полусладкое</option>
@@ -23,7 +23,7 @@
     </select>
   </div>
   <div class="sparkling-selector">
-    <label for="sparkling-selector">Игристое</label>
+    <label for="sparkling-selector">игристое</label>
     <input type="checkbox" name="sparkling-selector" id="sparkling-selector">
   </div>
   <div>

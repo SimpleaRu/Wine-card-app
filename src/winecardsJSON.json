@@ -4,7 +4,7 @@
         "sugarContent": "dry",
         "colorType": "red",
         "rating": "7",
-        "imgUrl": "../img/cabernet_saperavi.jpg",
+        "imgUrl": "..\/img\/cabernet_saperavi.jpg",
         "colorText": "Пурпурный",
         "aromeText": "Ноты чёрной смородины",
         "tasteText": "Сбалансированный, немного танинный",
@@ -18,7 +18,7 @@
         "sugarContent": "dry",
         "colorType": "red",
         "rating": "6",
-        "imgUrl": "../img/toso.jpg",
+        "imgUrl": "..\/img\/toso.jpg",
         "colorText": "Рубиново-пурпурный",
         "aromeText": "Сдержанный, гармоничный",
         "tasteText": "Грубый, немного танинный",
@@ -26,5 +26,19 @@
         "priceText": "620",
         "noteText": "Молодое вино с ярким вкусом ",
         "contributor": "Alex_Ka"
+    },
+    {
+        "name": "Primitivo Di Manduria",
+        "imgUrl": "img\/1753вино3.jpg",
+        "colorType": "red",
+        "sugarContent": "dry",
+        "rating": "9",
+        "colorText": "рубиново-красный",
+        "aromeText": "вишни и специи",
+        "tasteText": "насыщенный, терпкий",
+        "originText": "Италия, Апулия",
+        "priceText": "700",
+        "noteText": "приятное вино с насыщенным вкусом",
+        "contributor": "Алла"
     }
 ]

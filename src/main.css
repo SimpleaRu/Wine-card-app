@@ -135,14 +135,16 @@ body {
   margin: 0 auto;
 }
 
-.selectors .winesColor {
-  background-color: #fff5e2;
-  padding: 5px 10px;
+.selectors #color-selector {
   border-radius: 10px;
+  padding: 2px 5px;
+  border: 1px solid rgb(212, 212, 212);
   margin: 0 10px 0 0;
+  background-color: #fff5e2;
 }
 
-.selectors .redWine, .selectors .whiteWine {
+.selectors .redWine, 
+.selectors .whiteWine {
   margin: 0 10px 0 0;
 }
 
@@ -209,7 +211,7 @@ body {
   margin: 0 5px 0 0;
 }
 
-.selectors  .sparkling-selector {
+.selectors .sparkling-selector {
   margin: 0 10px 0 0;
   border-radius: 10px;
   padding: 5px 10px;
