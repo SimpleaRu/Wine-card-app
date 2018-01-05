@@ -9,7 +9,10 @@ var form = document.forms.namedItem('addcard');
 var fileFild = document.querySelector('#fileFild');
 var sugarContent = document.querySelector('#sugarContent');
 var fileFildText = document.querySelector('.file-text');
+var winesColor = document.querySelector('.winesColor');
+var colorSelector = document.getElementsByName('selectcolor');
 var wineCardsArr;
+
 
 function IsJsonString(str) {
     try {
@@ -32,7 +35,7 @@ function renderCards() {
         }
         else {
             if (IsJsonString(xhr.response)) {
-                var wineCardsArr = JSON.parse(xhr.response);
+                wineCardsArr = JSON.parse(xhr.response);
                 wineWraper.innerHTML = '';
                 //  console.log(result);
                 let template = render({ list: wineCardsArr });
@@ -93,12 +96,17 @@ form.addEventListener('submit', function (e) {
 });
 
 fileFild.addEventListener('change', function (e) {
-    console.log(fileFild.files[0].size);
-    console.log(fileFild.files);
+    /*     console.log(fileFild.files[0].size);
+        console.log(fileFild.files); */
     fileFildText.innerText = fileFild.files[0].name;
 
 });
 
 sugarContent.addEventListener('change', function (e) {
-    console.log(sugarContent.value);
+
+});
+
+/* Обработка селекторов */
+winesColor.addEventListener('click', function (e) {
+    console.log(wineCardsArr);
 });

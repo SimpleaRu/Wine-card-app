@@ -209,7 +209,12 @@ body {
   margin: 0 5px 0 0;
 }
 
-.add-button-wrapper .add-button {}
+.selectors  .sparkling-selector {
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #fff5e2;
+}
 
 /* --- */
 
