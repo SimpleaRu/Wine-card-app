@@ -10,6 +10,7 @@ var fileFild = document.querySelector('#fileFild');
 var sugarContent = document.querySelector('#sugarContent');
 var fileFildText = document.querySelector('.file-text');
 var colorSelector = document.querySelector('#color-selector');
+var sparkling = document.querySelector('#sparkling');
 var wineCardsArr;
 var wineCardsFilter;
 
@@ -122,4 +123,8 @@ colorSelector.addEventListener('change', function (e) {
     });
 
     console.log(wineCardsFilter);
-})
+});
+
+sparkling.addEventListener('change', function (e) {
+    console.log(sparkling.checked);
+});

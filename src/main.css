@@ -177,6 +177,7 @@ body {
   padding: 8px 12px;
   border-radius: 10px;
   border: 1px solid rgb(154, 31, 83);
+  font-weight: bold;
 }
 .selectors .add-button:hover {
   background-color: rgb(105, 22, 55);
@@ -209,6 +210,9 @@ body {
   border-radius: 10px;
   padding: 5px 10px;
   background-color: #fff5e2;
+}
+.sparkling-selector label {
+  margin: 0 10px 0 0;
 }
 
 /* --- */
@@ -246,7 +250,7 @@ body {
 .add-wine-form li {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
 }
 
 .add-wine-form li:last-child {
