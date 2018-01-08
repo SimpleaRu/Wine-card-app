@@ -226,10 +226,10 @@ body {
 }
 
 .add-wine-form {
-  width: 400px;
+  width: 420px;
   background: linear-gradient(45deg, rgb(48, 8, 22), rgb(170, 82, 113));
   position: fixed;
-  top: 10px;
+  top: 30px;
   left: calc(50% - 200px);
   box-sizing: border-box;
   padding: 10px 30px 10px 20px;
@@ -311,7 +311,7 @@ body {
 
 .add-wine-form #formRaiting {
   border-radius: 10px;
-  margin: 0 40px 0 0;
+  margin: 0 152px 0 0;
   padding: 1px;
   border: 1px solid rgb(212, 212, 212);
   width: 49px;
@@ -368,7 +368,7 @@ body {
   padding: 0;
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 #priceText {
@@ -401,12 +401,11 @@ body {
   width: 190px;
 }
 
-#raiting-sparkling {
-  justify-content: flex-start;
+.add-wine-form #raiting-wrapper {
+  justify-content: space-between;
 }
-
-#raiting-sparkling label:nth-child(1) {
-  margin: 0 97px 0 0;
+.add-wine-form #sparkling {
+  margin: 0 185px 0 0;
 }
 
 /* --- */

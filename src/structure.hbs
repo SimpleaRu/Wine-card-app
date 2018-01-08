@@ -30,9 +30,9 @@
     <label for="search-string" class="visibility-hidden">Поиск по названию</label>
     <input type="text" name="search-string" id="search-string" placeholder="Введите название вина">
   </div>
-    <button type="button" class="add-button" aria-label="добавить вино">
-      добавить
-    </button>
+  <button type="button" class="add-button" aria-label="добавить вино">
+    добавить
+  </button>
 </section>
 
 <section class="wine-cards">
@@ -72,6 +72,10 @@
           </select>
         </li>
         <li>
+          <label for="sparkling">Игристое:</label>
+          <input type="checkbox" name="sparkling" id="sparkling">
+        </li>
+        <li>
           <label for="formColorText">Цвет</label>
           <input type="text" name="colorText" id="formColorText" required>
         </li>
@@ -91,7 +95,7 @@
           <label for="priceText">Цена &#8381;</label>
           <input type="number" name="priceText" id="priceText" required>
         </li>
-        <li id="raiting-sparkling">
+        <li id="raiting-wrapper">
           <label for="formRaiting"> Рейтинг</label>
           <select name="formRaiting" id="formRaiting">
             <option>1</option>
@@ -105,8 +109,6 @@
             <option>9</option>
             <option>10</option>
           </select>
-          <label for="sparkling">Игристое:</label>
-          <input type="checkbox" name="sparkling" id="sparkling">
         </li>
         <li>
           <div class="noteText-wraper">
