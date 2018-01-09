@@ -47,6 +47,7 @@
 			$wineCardArr[$nextNum]->colorType = $_POST['wineColor'];
 			$wineCardArr[$nextNum]->sugarContent = $_POST['sugarContent']; 
 			$wineCardArr[$nextNum]->rating = $_POST['formRaiting'];
+			$wineCardArr[$nextNum]->sparkling = $_POST['sparkling'];
 			$wineCardArr[$nextNum]->colorText = $_POST['colorText'];
 			$wineCardArr[$nextNum]->aromeText = $_POST['aromeText'];
 			$wineCardArr[$nextNum]->tasteText = $_POST['tasteText'];
@@ -56,7 +57,7 @@
 			$wineCardArr[$nextNum]->contributor = $_POST['contributor'];
 			
 			$wineCardArr = array_values($wineCardArr);
-			$winecardArrJson = json_encode($wineCardArr);
+			$winecardArrJson = json_encode($wineCardArr, JSON_UNESCAPED_UNICODE);
 			file_put_contents('winecardsJSON.json', $winecardArrJson); 
 
 		//	echo var_dump($wineCardArr);

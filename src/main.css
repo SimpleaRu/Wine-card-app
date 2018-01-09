@@ -6,13 +6,14 @@ body {
   background-color: rgb(59, 8, 29);
 }
 
-.general-title {
+/* .general-title {
   text-align: center;
   font-family: 'Great Vibes', cursive;
   color: rgb(255, 245, 226);
   margin: 10px 0 20px 0;
   font-size: 100px;
-}
+} */
+
 /* .backgroundImg {
   background-image: url('/img/back2.jpg');
   background-repeat: no-repeat;
