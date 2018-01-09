@@ -10,9 +10,10 @@ var fileFild = document.querySelector('#fileFild');
 var sugarContent = document.querySelector('#sugarContent');
 var fileFildText = document.querySelector('.file-text');
 var colorSelector = document.querySelector('#color-selector');
-var sparkling = document.querySelector('#sparkling');
+var tasteSelector = document.querySelector('#taste-selector');
+var sparkling = document.querySelector('#sparkling-selector');
 var wineCardsArr;
-var wineCardsFilter;
+var wineCardsFilter = [];
 
 
 function IsJsonString(str) {
@@ -24,8 +25,11 @@ function IsJsonString(str) {
     return true;
 }
 
-function checkFilter (arr, filter) {
+function renderFilter(arr) {
 
+    let template = render({ list: arr });
+
+    wineWraper.innerHTML = template;
 }
 
 function renderCards() {
@@ -72,7 +76,7 @@ document.body.addEventListener('click', function (e) {
 });
 
 form.addEventListener('submit', function (e) {
-    if (fileFild.files[0].size > 400000) {
+    if (fileFild.files[0].size > 500000) {
         fileFildText.innerText = 'Выберите фото до 500 KB';
         console.log('file too big');
         e.preventDefault();
@@ -80,11 +84,11 @@ form.addEventListener('submit', function (e) {
     else {
         var oData = new FormData(form);
         var oReq = new XMLHttpRequest();
-        oReq.open("POST", "functions.php", true);
+        oReq.open('POST', 'functions.php', true);
         oReq.onload = function (oEvent) {
 
             if (oReq.status == 200) {
-                console.log("Uploaded!");
+                console.log('Uploaded!');
                 renderCards();
                 addWineForm.style.display = 'none';
 
@@ -113,18 +117,45 @@ sugarContent.addEventListener('change', function (e) {
 
 /* Обработка селекторов */
 colorSelector.addEventListener('change', function (e) {
-    console.log(colorSelector.value);
- 
+
     wineCardsFilter = wineCardsArr.filter(function (elem) {
         if (elem.colorType == colorSelector.value || colorSelector.value == 'any') {
-          
+
             return elem;
         }
     });
 
-    console.log(wineCardsFilter);
+    //  console.log(wineCardsFilter);
+    renderFilter(wineCardsFilter);
+});
+
+tasteSelector.addEventListener('change', function (e) {
+
+    wineCardsFilter = wineCardsArr.filter(function (elem) {
+        if (elem.sugarContent == tasteSelector.value || tasteSelector.value == 'any') {
+
+            return elem;
+        }
+    });
+
+    // console.log(wineCardsFilter);
+    renderFilter(wineCardsFilter);
+
 });
 
 sparkling.addEventListener('change', function (e) {
-    console.log(sparkling.checked);
+    //  console.log(sparkling.checked);
+    if (sparkling.checked) {
+
+        wineCardsFilter = wineCardsArr.filter(function (elem) {
+            if (elem.sparkling == sparkling.value) {
+                return elem;
+            }
+        });
+
+        renderFilter(wineCardsFilter);
+    } else {
+        renderFilter(wineCardsArr);
+    }
+
 });
