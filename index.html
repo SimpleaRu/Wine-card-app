@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wine card</title>
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet"> 
+<link href="styles.css" rel="stylesheet"></head>
+
+<body>
+    <div class="backgroundImg">
+        <h1 class="visibility-hidden">Wine card</h1>
+        <section class="selectors">
+          <div class="winesColor">
+            <label for="color-selector" class="visibility-hidden">Содержание сахара</label>
+            <select name="color-selector" id="color-selector">
+              <option value="any">цвет</option>
+              <option value="red">красное</option>
+              <option value="white">белое</option>
+              <option value="rose">розовое</option>
+        
+            </select>
+          </div>
+          <div>
+            <label for="taste-selector" class="visibility-hidden">Содержание сахара</label>
+            <select name="taste-selector" id="taste-selector">
+              <option value="any">сладость / крепость</option>
+              <option value="dry">сухое</option>
+              <option value="semidry">полусухое</option>
+              <option value="semisweet">полусладкое</option>
+              <option value="dessertSemisweet">десертное полусладкое</option>
+              <option value="sweetDessert">десертное сладкое</option>
+              <option value="liqueur">ликерное</option>
+              <option value="strong">крепкое</option>
+            </select>
+          </div>
+          <div class="sparkling-selector">
+            <label for="sparkling-selector">игристое</label>
+            <input type="checkbox" name="sparkling-selector" id="sparkling-selector">
+          </div>
+          <div>
+            <label for="search-string" class="visibility-hidden">Поиск по названию</label>
+            <input type="text" name="search-string" id="search-string" placeholder="Введите название вина">
+          </div>
+          <button type="button" class="add-button" aria-label="добавить вино">
+            ДОБАВИТЬ
+          </button>
+        </section>
+        
+        <section class="wine-cards">
+        </section>
+        
+        <section class="add-wine-form-wrapper">
+          <div class="add-wine-form">
+            <h3 class="form-titile">Добавить карту</h3>
+            <form method="post" enctype="multipart/form-data" name="addcard">
+              <ul>
+                <li>
+                  <label for="contributor">Представьтесь</label>
+                  <input type="text" name="contributor" id="contributor" required>
+                </li>
+                <li>
+                  <label for="formName">Марка</label>
+                  <input type="text" name="formName" id="formName" placeholder="Cabernet" required>
+                </li>
+                <li class="wineColor">
+                  <label for="wineColor">Цвет </label>
+                  <select name="wineColor" id="wineColor">
+                    <option value="red">красное</option>
+                    <option value="white">белое</option>
+                    <option value="rose">розовое</option>
+                  </select>
+                </li>
+                <li>
+                  <label for="sugarContent">Содержание сахара</label>
+                  <select name="sugarContent" id="sugarContent">
+                    <option value="dry">сухое</option>
+                    <option value="semidry">полусухое</option>
+                    <option value="semisweet">полусладкое</option>
+                    <option value="dessertSemisweet">десертное полусладкое</option>
+                    <option value="sweetDessert">десертное сладкое</option>
+                    <option value="liqueur">ликерное</option>
+                    <option value="strong">крепкое</option>
+                  </select>
+                </li>
+                <li>
+                  <label for="sparkling">Игристое:</label>
+                  <input type="checkbox" name="sparkling" id="sparkling" value="yes">
+                </li>
+                <li>
+                  <label for="formColorText">Цвет</label>
+                  <input type="text" name="colorText" id="formColorText" required>
+                </li>
+                <li>
+                  <label for="aromeText">Аромат</label>
+                  <input type="text" name="aromeText" id="aromeText" required>
+                </li>
+                <li>
+                  <label for="tasteText">Вкус</label>
+                  <input type="text" name="tasteText" id="tasteText" required>
+                </li>
+                <li>
+                  <label for="originText">Происхождение</label>
+                  <input type="text" name="originText" id="originText" placeholder="Италия" required>
+                </li>
+                <li>
+                  <label for="priceText">Цена &#8381;</label>
+                  <input type="number" name="priceText" id="priceText" required>
+                </li>
+                <li id="raiting-wrapper">
+                  <label for="formRaiting"> Рейтинг</label>
+                  <select name="formRaiting" id="formRaiting">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </li>
+                <li>
+                  <div class="noteText-wraper">
+                    <label for="noteText">Комментарии:</label>
+                    <textarea name="noteText" id="noteText">
+                    </textarea>
+                  </div>
+                </li>
+                <li id="file-button">
+                  <label for="fileFild" class="fileFild">ВЫБРАТЬ ФОТО</label>
+                  <input type="file" name="file" id="fileFild" class="visibility-hidden">
+                  <p class="file-text">(jpeg, png, bmp размер до 500 KB)</p>
+                </li>
+                <li>
+                  <label for="formSubmit"></label>
+                  <input type="submit" value="добавить" id="formSubmit">
+                </li>
+              </ul>
+            </form>
+            <button type="button" aria-label="Закрыть форму" id="formClose"></button>
+          </div>
+        </section>
+    </div>
+    <script src="src/index.js"></script>
+<script type="text/javascript" src="main.7b87e83b4eae7a6f3af6.js"></script></body>
+
+</html>

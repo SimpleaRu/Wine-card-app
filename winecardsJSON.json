@@ -1,11 +1,62 @@
 [
     {
         "name": "Cabernet Saperavi",
-        "imgUrl": "img\/1.png"
+        "sugarContent": "dry",
+        "colorType": "red",
+        "rating": "7",
+        "sparkling": "",
+        "imgUrl": "..\/img\/cabernet_saperavi.jpg",
+        "colorText": "Пурпурный",
+        "aromeText": "Ноты чёрной смородины",
+        "tasteText": "Сбалансированный, немного танинный",
+        "originText": "Крым, Массандра",
+        "priceText": "300",
+        "noteText": "Молодое крымское вино",
+        "contributor": "Alex_Ka"
     },
     {
-        "name": "Cabernet",
-        "imgUrl": "img\/2.png"
+        "name": "Toso",
+        "sugarContent": "dry",
+        "colorType": "red",
+        "rating": "6",
+        "sparkling": "",
+        "imgUrl": "..\/img\/toso.jpg",
+        "colorText": "Рубиново-пурпурный",
+        "aromeText": "Сдержанный, гармоничный",
+        "tasteText": "Грубый, немного танинный",
+        "originText": "Аргентина, Мендоза",
+        "priceText": "620",
+        "noteText": "Молодое вино с ярким вкусом ",
+        "contributor": "Alex_Ka"
+    },
+    {
+        "name": "Primitivo Di Manduria",
+        "imgUrl": "img\/1753вино3.jpg",
+        "colorType": "red",
+        "sugarContent": "dry",
+        "rating": "9",
+        "sparkling": "",
+        "colorText": "рубиново-красный",
+        "aromeText": "вишни и специи",
+        "tasteText": "насыщенный, терпкий",
+        "originText": "Италия, Апулия",
+        "priceText": "700",
+        "noteText": "приятное вино с насыщенным вкусом",
+        "contributor": "Алла"
+    },
+    {
+        "name": "Martini Asti",
+        "imgUrl": "img\/5851martini_asti.jpg",
+        "colorType": "white",
+        "sugarContent": "semisweet",
+        "rating": "9",
+        "sparkling": "yes",
+        "colorText": "Прозрачный, золотистый",
+        "aromeText": "Приятный, цветочный",
+        "tasteText": "Нежно сладкий, сливочный",
+        "originText": "Италия",
+        "priceText": "1000",
+        "noteText": "Приятное и качетсвенное вино. Изготовллено в провинции Асти. Местро производства гарантируется сертификатом D.O.C.G",
+        "contributor": "Александр"
     }
-
 ]
