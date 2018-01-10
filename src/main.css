@@ -166,6 +166,9 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+.selectors #color-selector:focus {
+ box-shadow: 0 0 10px 5px rgb(250, 167, 1);
+}
 
 .selectors .redWine, .selectors .whiteWine {
   margin: 0 10px 0 0;
@@ -197,6 +200,9 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+.selectors #search-string:focus {
+  box-shadow: 0 0 10px 5px rgb(250, 167, 1);
+}
 
 .selectors #taste-selector {
   border-radius: 10px;
@@ -205,12 +211,18 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+.selectors #taste-selector:focus {
+  box-shadow: 0 0 10px 5px rgb(250, 167, 1)
+}
 
 .selectors .sparkling-selector {
   margin: 0 10px 0 0;
   border-radius: 10px;
   padding: 5px 10px;
   background-color: #fff5e2;
+}
+.selectors #sparkling-selector:checked {
+  box-shadow: 0 0 10px 5px rgb(250, 167, 1);
 }
 .sparkling-selector label {
   margin: 0 10px 0 0;

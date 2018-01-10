@@ -12,9 +12,9 @@ var fileFildText = document.querySelector('.file-text');
 var colorSelector = document.querySelector('#color-selector');
 var tasteSelector = document.querySelector('#taste-selector');
 var sparkling = document.querySelector('#sparkling-selector');
+var searchString = document.querySelector('#search-string');
 var wineCardsArr;
 var wineCardsFilter = [];
-
 
 function IsJsonString(str) {
     try {
@@ -31,6 +31,8 @@ function renderFilter(arr) {
 
     wineWraper.innerHTML = template;
 }
+
+
 
 function renderCards() {
 
@@ -59,15 +61,33 @@ function renderCards() {
     });
 }
 
+function filterArr(array, inputValue) {
+    let FilterArr = [];
+    for (var i = 0; i < array.length; i++) {
+        if (isMatching(array[i].name, inputValue.value)) {
+
+            FilterArr.push(array[i]);
+        }
+    }
+    return FilterArr;
+}
+
+function isMatching(full, chunk) {
+    full = full.toLowerCase();
+    chunk = chunk.toLowerCase();
+
+    if (full.indexOf(chunk) >= 0) {
+        return true;
+    }
+    return false;
+}
+
 renderCards();
 
 addCardButton.addEventListener('click', function (e) {
     addWineForm.style.display = 'block';
 
 });
-/* formClose.addEventListener('click', function (e) {
-    addWineForm.style.display = 'none';
-}); */
 
 document.body.addEventListener('click', function (e) {
     if (e.target == addWineForm || e.target == formClose) {
@@ -159,3 +179,9 @@ sparkling.addEventListener('change', function (e) {
     }
 
 });
+
+searchString.addEventListener('keyup', function (e) {
+
+    wineCardsFilter = filterArr(wineCardsArr, searchString);
+    renderFilter(wineCardsFilter);
+})
