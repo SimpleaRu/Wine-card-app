@@ -166,8 +166,9 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+
 .selectors #color-selector:focus {
- box-shadow: 0 0 10px 5px rgb(250, 167, 1);
+  box-shadow: 0 0 10px 5px rgb(250, 167, 1);
 }
 
 .selectors .redWine, .selectors .whiteWine {
@@ -183,10 +184,12 @@ body {
   border: 1px solid rgb(154, 31, 83);
   font-weight: bold;
 }
+
 .selectors .add-button:hover {
   background-color: rgb(105, 22, 55);
-  border: 1px solid  rgb(105, 22, 55);
+  border: 1px solid rgb(105, 22, 55);
 }
+
 .selectors .add-button:active {
   background-color: rgb(78, 16, 41);
   border: 1px solid rgb(78, 16, 41);
@@ -200,6 +203,7 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+
 .selectors #search-string:focus {
   box-shadow: 0 0 10px 5px rgb(250, 167, 1);
 }
@@ -211,6 +215,7 @@ body {
   margin: 0 10px 0 0;
   background-color: #fff5e2;
 }
+
 .selectors #taste-selector:focus {
   box-shadow: 0 0 10px 5px rgb(250, 167, 1)
 }
@@ -221,9 +226,11 @@ body {
   padding: 5px 10px;
   background-color: #fff5e2;
 }
+
 .selectors #sparkling-selector:checked {
   box-shadow: 0 0 10px 5px rgb(250, 167, 1);
 }
+
 .sparkling-selector label {
   margin: 0 10px 0 0;
 }
@@ -421,6 +428,7 @@ body {
 .add-wine-form #raiting-wrapper {
   justify-content: space-between;
 }
+
 .add-wine-form #sparkling {
   margin: 0 185px 0 0;
 }

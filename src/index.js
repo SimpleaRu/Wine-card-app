@@ -13,6 +13,7 @@ var colorSelector = document.querySelector('#color-selector');
 var tasteSelector = document.querySelector('#taste-selector');
 var sparkling = document.querySelector('#sparkling-selector');
 var searchString = document.querySelector('#search-string');
+var moreInfo = document.querySelector('.more-info');
 var wineCardsArr;
 var wineCardsFilter = [];
 
@@ -22,6 +23,7 @@ function IsJsonString(str) {
     } catch (e) {
         return false;
     }
+
     return true;
 }
 
@@ -31,8 +33,6 @@ function renderFilter(arr) {
 
     wineWraper.innerHTML = template;
 }
-
-
 
 function renderCards() {
 
@@ -185,3 +185,7 @@ searchString.addEventListener('keyup', function (e) {
     wineCardsFilter = filterArr(wineCardsArr, searchString);
     renderFilter(wineCardsFilter);
 })
+
+wineWraper.addEventListener('click', function (e) {
+    console.log( e.target.dataset.parent );
+});
