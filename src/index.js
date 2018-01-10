@@ -187,5 +187,16 @@ searchString.addEventListener('keyup', function (e) {
 })
 
 wineWraper.addEventListener('click', function (e) {
-    console.log( e.target.dataset.parent );
+
+    if (e.target.className == 'more-info') {
+        var bigCard = [];
+
+        for (var i = 0; i < wineCardsArr.length; i++) {
+            if (e.target.dataset.parent == wineCardsArr[i].name) {
+                bigCard.push(wineCardsArr[i]);
+            }
+        }
+        console.log(bigCard[0]);
+
+    }
 });
