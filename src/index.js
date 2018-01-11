@@ -188,21 +188,27 @@ searchString.addEventListener('keyup', function (e) {
 
 wineWraper.addEventListener('click', function (e) {
 
-/*     if (e.target.className == 'more-info') {
-        var bigCard = [];
+    if (e.target.className == 'more-info') {
+        /*
+       var bigCard = [];
 
-        for (var i = 0; i < wineCardsArr.length; i++) {
-            if (e.target.dataset.parent == wineCardsArr[i].name) {
-                bigCard.push(wineCardsArr[i]);
-            }
-        }
-        console.log(bigCard);
-        renderFilter(bigCard);
+       for (var i = 0; i < wineCardsArr.length; i++) {
+           if (e.target.dataset.parent == wineCardsArr[i].name) {
+               bigCard.push(wineCardsArr[i]);
+           }
+       }
+       console.log(bigCard);
+       renderFilter(bigCard);
+*/
+        var bigCard = e.target.parentElement;
 
-    } */
-console.log(e.target.parentElement);
-    wineWraper.innerHTML ='';
-    wineWraper.appendChild(e.target.parentElement);
+        console.log(bigCard.children[0]);
+        bigCard.classList.add("card-item-big");
 
+        bigCard.children[0].classList.add("card-img-big");
+        wineWraper.innerHTML = '';
+
+        wineWraper.appendChild(bigCard);
+
+    }
 });
-

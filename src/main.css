@@ -52,6 +52,12 @@ body {
   padding: 0 0 10px 0;
 }
 
+.card-item-big {
+  width: 1150px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
 .card-item:nth-child(3n) {
   margin: 0 0 20px 0;
 }
@@ -64,19 +70,26 @@ body {
   color: rgb(26, 0, 0);
   text-align: center;
   font-weight: normal;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .card-item p {
   margin: 0 0 10px 0;
 }
 
-.card-item .card-img {
+.card-img {
   position: relative;
   width: 350px;
   height: 300px;
   background-size: cover;
   background-position: 50% 90%;
   border-radius: 10px 10px 0 0;
+}
+.card-img-big {
+  float: left;
+  width: 400px;
+  height: 470px;
 }
 
 .card-text {
@@ -88,7 +101,7 @@ body {
 
 .card-text p:last-child {
   overflow: hidden;
-  height: 30px;
+  height: 29px;
   margin: 0;
 }
 
@@ -180,7 +193,7 @@ body {
   cursor: pointer;
   color: white;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid rgb(154, 31, 83);
   font-weight: bold;
 }
