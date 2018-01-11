@@ -188,7 +188,7 @@ searchString.addEventListener('keyup', function (e) {
 
 wineWraper.addEventListener('click', function (e) {
 
-    if (e.target.className == 'more-info') {
+/*     if (e.target.className == 'more-info') {
         var bigCard = [];
 
         for (var i = 0; i < wineCardsArr.length; i++) {
@@ -196,7 +196,13 @@ wineWraper.addEventListener('click', function (e) {
                 bigCard.push(wineCardsArr[i]);
             }
         }
-        console.log(bigCard[0]);
+        console.log(bigCard);
+        renderFilter(bigCard);
 
-    }
+    } */
+console.log(e.target.parentElement);
+    wineWraper.innerHTML ='';
+    wineWraper.appendChild(e.target.parentElement);
+
 });
+
