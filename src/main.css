@@ -156,6 +156,10 @@ body {
   visibility: visible;
 }
 
+.card-item:hover .all-Wines-Lis {
+  visibility: visible;
+}
+
 .card-item .more-info:hover {
   color: rgb(250, 121, 1);
 }
@@ -168,6 +172,7 @@ body {
   cursor: pointer;
   font-family: 'Marck Script', cursive;
   text-shadow: gray 2px 3px 4px;
+  visibility: hidden;
 }
 .all-Wines-Lis:hover {
   text-shadow: none;
