@@ -201,14 +201,23 @@ wineWraper.addEventListener('click', function (e) {
        renderFilter(bigCard);
 */
         var bigCard = e.target.parentElement;
+        var allWinesList = document.createElement('p');
 
-        console.log(bigCard.children[0]);
+        allWinesList.innerText = "К списку вин";
+        allWinesList.classList.add("all-Wines-Lis");
+        console.log(bigCard);
         bigCard.classList.add("card-item-big");
 
         bigCard.children[0].classList.add("card-img-big");
+        bigCard.children[3].classList.add("display-none");
         wineWraper.innerHTML = '';
 
         wineWraper.appendChild(bigCard);
+        bigCard.appendChild(allWinesList);
+
+        allWinesList.addEventListener('click', function (e) {
+            renderFilter(wineCardsArr);
+        });
 
     }
 });

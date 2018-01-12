@@ -50,12 +50,14 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   padding: 0 0 10px 0;
+  position: relative;
 }
 
 .card-item-big {
   width: 1150px;
   min-height: 500px;
   margin: 0 auto;
+  position: relative;
 }
 
 .card-item:nth-child(3n) {
@@ -86,6 +88,7 @@ body {
   background-position: 50% 90%;
   border-radius: 10px 10px 0 0;
 }
+
 .card-img-big {
   float: left;
   width: 400px;
@@ -155,6 +158,23 @@ body {
 
 .card-item .more-info:hover {
   color: rgb(250, 121, 1);
+}
+
+.all-Wines-Lis {
+  position: absolute;
+  top: 20px;
+  left: 950px;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: 'Marck Script', cursive;
+  text-shadow: gray 2px 3px 4px;
+}
+.all-Wines-Lis:hover {
+  text-shadow: none;
+}
+
+.display-none {
+  display: none;
 }
 
 /* Блок с фильтрами */
