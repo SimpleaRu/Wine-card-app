@@ -14,6 +14,7 @@ var tasteSelector = document.querySelector('#taste-selector');
 var sparkling = document.querySelector('#sparkling-selector');
 var searchString = document.querySelector('#search-string');
 var moreInfo = document.querySelector('.more-info');
+var wineCardLogo = document.querySelector('.wine-card-logo');
 var wineCardsArr;
 var wineCardsFilter = [];
 
@@ -192,12 +193,12 @@ wineWraper.addEventListener('click', function (e) {
 
         var bigCard = [];
 
-        for (var i = 0; i < wineCardsArr.length; i++) {
+/*         for (var i = 0; i < wineCardsArr.length; i++) {
             if (e.target.dataset.parent == wineCardsArr[i].name) {
                 bigCard.push(wineCardsArr[i]);
             }
         }
-        console.log(bigCard);
+        console.log(bigCard); */
 
 
         var bigCard = e.target.parentElement;
@@ -218,9 +219,11 @@ wineWraper.addEventListener('click', function (e) {
         wineWraper.appendChild(bigCard);
         bigCard.appendChild(allWinesList);
 
-
-
         allWinesList.addEventListener('click', function (e) {
+            renderFilter(wineCardsArr);
+        });
+
+        wineCardLogo.addEventListener('click', function (e) {
             renderFilter(wineCardsArr);
         });
 
