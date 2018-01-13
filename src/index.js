@@ -166,7 +166,7 @@ tasteSelector.addEventListener('change', function (e) {
 sparkling.addEventListener('change', function (e) {
     //  console.log(sparkling.checked);
     if (sparkling.checked) {
-
+        console.log(sparkling.value);
         wineCardsFilter = wineCardsArr.filter(function (elem) {
             if (elem.sparkling == sparkling.value) {
                 return elem;
@@ -189,17 +189,17 @@ searchString.addEventListener('keyup', function (e) {
 wineWraper.addEventListener('click', function (e) {
 
     if (e.target.className == 'more-info') {
-        /*
-       var bigCard = [];
 
-       for (var i = 0; i < wineCardsArr.length; i++) {
-           if (e.target.dataset.parent == wineCardsArr[i].name) {
-               bigCard.push(wineCardsArr[i]);
-           }
-       }
-       console.log(bigCard);
-       renderFilter(bigCard);
-*/
+        var bigCard = [];
+
+        for (var i = 0; i < wineCardsArr.length; i++) {
+            if (e.target.dataset.parent == wineCardsArr[i].name) {
+                bigCard.push(wineCardsArr[i]);
+            }
+        }
+        console.log(bigCard);
+
+
         var bigCard = e.target.parentElement;
         var allWinesList = document.createElement('p');
 
@@ -209,11 +209,16 @@ wineWraper.addEventListener('click', function (e) {
         bigCard.classList.add("card-item-big");
 
         bigCard.children[0].classList.add("card-img-big");
+        bigCard.children[1].classList.add("card-title-big");
+        bigCard.children[2].lastElementChild.style.height = 'auto';
+
         bigCard.children[3].classList.add("display-none");
         wineWraper.innerHTML = '';
 
         wineWraper.appendChild(bigCard);
         bigCard.appendChild(allWinesList);
+
+
 
         allWinesList.addEventListener('click', function (e) {
             renderFilter(wineCardsArr);

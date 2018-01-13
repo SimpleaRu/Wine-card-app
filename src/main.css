@@ -6,20 +6,10 @@ body {
   background-color: rgb(59, 8, 29);
 }
 
-/* .general-title {
-  text-align: center;
-  font-family: 'Great Vibes', cursive;
-  color: rgb(255, 245, 226);
-  margin: 10px 0 20px 0;
-  font-size: 100px;
-} */
-
-/* .backgroundImg {
-  background-image: url('/img/back2.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  min-height: 1000px;
-} */
+.wine-card-logo {
+  width: 500px;
+  margin: 20px auto;
+}
 
 .visibility-hidden {
   position: absolute;
@@ -64,7 +54,7 @@ body {
   margin: 0 0 20px 0;
 }
 
-.card-item h3 {
+.card-title {
   font-family: 'Marck Script', cursive;
   font-size: 22px;
   margin: 0 0 10px 0;
@@ -74,6 +64,10 @@ body {
   font-weight: normal;
   width: 60%;
   margin: 0 auto;
+}
+
+.card-title-big {
+  margin: 15px auto;
 }
 
 .card-item p {
@@ -93,6 +87,8 @@ body {
   float: left;
   width: 400px;
   height: 470px;
+  margin: 0 20px 0 0;
+  border-radius: 10px 0 10px 0;
 }
 
 .card-text {
@@ -104,7 +100,7 @@ body {
 
 .card-text p:last-child {
   overflow: hidden;
-  height: 29px;
+  height: 16px;
   margin: 0;
 }
 
@@ -174,12 +170,26 @@ body {
   text-shadow: gray 2px 3px 4px;
   visibility: hidden;
 }
+
 .all-Wines-Lis:hover {
   text-shadow: none;
 }
 
 .display-none {
   display: none;
+}
+
+.footer {
+  width: 1150px;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.footer-text {
+  text-align: center;
+  color: #fff5e296;
+  padding: 20px 0px;
+  margin: 0;
 }
 
 /* Блок с фильтрами */
@@ -221,16 +231,19 @@ body {
   border-radius: 20px;
   border: 1px solid rgb(154, 31, 83);
   font-weight: bold;
+  box-shadow: 0 0 0px 2px #fff5e2;
 }
 
 .selectors .add-button:hover {
   background-color: rgb(105, 22, 55);
   border: 1px solid rgb(105, 22, 55);
+  box-shadow: none;
 }
 
 .selectors .add-button:active {
   background-color: rgb(78, 16, 41);
   border: 1px solid rgb(78, 16, 41);
+  box-shadow: none;
 }
 
 .selectors #search-string {
