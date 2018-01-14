@@ -551,7 +551,7 @@ body {
   visibility: hidden;
 }
 
-.form-sparkling-input:checked~* .form-checkbox-view::before {
+.form-sparkling-input:checked ~ * .form-checkbox-view::before {
   visibility: visible;
 }
 

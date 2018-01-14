@@ -140,7 +140,7 @@ sugarContent.addEventListener('change', function (e) {
 colorSelector.addEventListener('change', function (e) {
 
     wineCardsFilter = wineCardsArr.filter(function (elem) {
-        if (elem.colorType == colorSelector.value || colorSelector.value == 'any') {
+        if (elem.colorType == colorSelector.value || colorSelector.value == 'любое') {
 
             return elem;
         }
@@ -153,7 +153,7 @@ colorSelector.addEventListener('change', function (e) {
 tasteSelector.addEventListener('change', function (e) {
 
     wineCardsFilter = wineCardsArr.filter(function (elem) {
-        if (elem.sugarContent == tasteSelector.value || tasteSelector.value == 'any') {
+        if (elem.sugarContent == tasteSelector.value || tasteSelector.value == 'любое') {
 
             return elem;
         }
@@ -206,12 +206,15 @@ wineWraper.addEventListener('click', function (e) {
 
         allWinesList.innerText = "К списку вин";
         allWinesList.classList.add("all-Wines-Lis");
-        console.log(bigCard);
+        console.log(bigCard.children[2].children[4]);
         bigCard.classList.add("card-item-big");
 
         bigCard.children[0].classList.add("card-img-big");
         bigCard.children[1].classList.add("card-title-big");
         bigCard.children[2].lastElementChild.style.height = 'auto';
+        bigCard.children[2].children[4].classList.remove("visibility-hidden");
+
+
 
         bigCard.children[3].classList.add("display-none");
         wineWraper.innerHTML = '';
