@@ -191,15 +191,15 @@ wineWraper.addEventListener('click', function (e) {
 
     if (e.target.className == 'more-info') {
 
-        var bigCard = [];
-
-/*         for (var i = 0; i < wineCardsArr.length; i++) {
-            if (e.target.dataset.parent == wineCardsArr[i].name) {
-                bigCard.push(wineCardsArr[i]);
-            }
-        }
-        console.log(bigCard); */
-
+        /* 
+                var bigCard = [];
+        
+                for (var i = 0; i < wineCardsArr.length; i++) {
+                    if (e.target.dataset.parent == wineCardsArr[i].name) {
+                        bigCard.push(wineCardsArr[i]);
+                    }
+                }
+                console.log(bigCard); */
 
         var bigCard = e.target.parentElement;
         var allWinesList = document.createElement('p');
@@ -223,9 +223,10 @@ wineWraper.addEventListener('click', function (e) {
             renderFilter(wineCardsArr);
         });
 
-        wineCardLogo.addEventListener('click', function (e) {
-            renderFilter(wineCardsArr);
-        });
 
     }
+});
+
+wineCardLogo.addEventListener('click', function (e) {
+    renderFilter(wineCardsArr);
 });
