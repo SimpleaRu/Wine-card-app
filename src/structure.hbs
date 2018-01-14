@@ -1,7 +1,7 @@
 <section class="selectors">
   <div class="winesColor">
     <label for="color-selector" class="visibility-hidden">Содержание сахара</label>
-    <select name="color-selector" id="color-selector">
+    <select name="color-selector" id="color-selector" class="selectors-arrow">
       <option value="any">цвет</option>
       <option value="red">красное</option>
       <option value="white">белое</option>
@@ -10,7 +10,7 @@
   </div>
   <div>
     <label for="taste-selector" class="visibility-hidden">Содержание сахара</label>
-    <select name="taste-selector" id="taste-selector">
+    <select name="taste-selector" id="taste-selector" class="selectors-arrow">
       <option value="any">сладость / крепость</option>
       <option value="dry">сухое</option>
       <option value="semidry">полусухое</option>
@@ -22,8 +22,10 @@
     </select>
   </div>
   <div class="sparkling-selector">
-    <label for="sparkling-selector">игристое</label>
-    <input type="checkbox" name="sparkling-selector" id="sparkling-selector" value="Игристое">
+    <input type="checkbox" name="sparkling-selector" id="sparkling-selector" value="Игристое" class="visibility-hidden">
+    <label for="sparkling-selector">игристое
+      <div class="checkbox-view"></div>
+    </label>
   </div>
   <div>
     <label for="search-string" class="visibility-hidden">Поиск по названию</label>
@@ -52,7 +54,7 @@
         </li>
         <li class="wineColor">
           <label for="wineColor">Цвет </label>
-          <select name="wineColor" id="wineColor">
+          <select name="wineColor" id="wineColor" class="selectors-arrow">
             <option value="red">красное</option>
             <option value="white">белое</option>
             <option value="rose">розовое</option>
@@ -60,7 +62,7 @@
         </li>
         <li>
           <label for="sugarContent">Содержание сахара</label>
-          <select name="sugarContent" id="sugarContent">
+          <select name="sugarContent" id="sugarContent" class="selectors-arrow">
             <option value="dry">сухое</option>
             <option value="semidry">полусухое</option>
             <option value="semisweet">полусладкое</option>
@@ -71,8 +73,10 @@
           </select>
         </li>
         <li>
-          <label for="sparkling">Игристое:</label>
-          <input type="checkbox" name="sparkling" id="sparkling" value="yes">
+          <input type="checkbox" name="sparkling" id="sparkling" value="Игристое" class="form-sparkling-input visibility-hidden">
+          <label for="sparkling" class="form-sparkling-lable">Игристое:
+            <div class="form-checkbox-view"></div>
+          </label>
         </li>
         <li>
           <label for="formColorText">Цвет</label>

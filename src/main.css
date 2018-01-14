@@ -9,6 +9,7 @@ body {
 .wine-card-logo {
   width: 500px;
   margin: 20px auto;
+  cursor: pointer;
 }
 
 .visibility-hidden {
@@ -185,6 +186,7 @@ body {
   border-radius: 0 0 10px 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .footer-text {
   text-align: center;
   color: #fff5e296;
@@ -207,9 +209,18 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
+.selectors-arrow {
+  background-image: url('/img/icon-down-dir.svg');
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .selectors #color-selector {
   border-radius: 10px;
-  padding: 2px 5px;
+  padding: 2px 20px 2px 5px;
   border: 1px solid rgb(212, 212, 212);
   margin: 0 10px 0 0;
   background-color: #fff5e2;
@@ -261,7 +272,7 @@ body {
 
 .selectors #taste-selector {
   border-radius: 10px;
-  padding: 2px 5px;
+  padding: 2px 20px 2px 5px;
   border: 1px solid rgb(212, 212, 212);
   margin: 0 10px 0 0;
   background-color: #fff5e2;
@@ -276,14 +287,43 @@ body {
   border-radius: 10px;
   padding: 5px 10px;
   background-color: #fff5e2;
+  position: relative;
 }
 
-.selectors #sparkling-selector:checked {
+.selectors #sparkling-selector:checked+label {
   box-shadow: 0 0 10px 5px rgb(250, 167, 1);
 }
 
+.selectors #sparkling-selector:checked~* .checkbox-view::before {
+  visibility: visible;
+}
+
 .sparkling-selector label {
-  margin: 0 10px 0 0;
+  margin: 0;
+  padding: 0 30px 0 0;
+}
+
+.checkbox-view {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(154, 31, 83);
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 80px;
+  top: 3px;
+}
+
+.checkbox-view::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(154, 31, 83);
+  top: 4px;
+  left: 4px;
+  visibility: hidden;
 }
 
 /* --- */
@@ -482,6 +522,37 @@ body {
 
 .add-wine-form #sparkling {
   margin: 0 185px 0 0;
+}
+
+.form-sparkling-lable {
+  position: relative;
+}
+
+.form-checkbox-view {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(212, 212, 212);
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 170px;
+  top: 0;
+}
+
+.form-checkbox-view::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(212, 212, 212);
+  top: 4px;
+  left: 4px;
+  visibility: hidden;
+}
+
+.form-sparkling-input:checked~* .form-checkbox-view::before {
+  visibility: visible;
 }
 
 /* --- */
