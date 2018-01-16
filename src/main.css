@@ -206,7 +206,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 10px;
-  background-color: rgba(255, 245, 226, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
 }
 
@@ -428,7 +428,7 @@ body {
 .add-wine-form #formRaiting {
   border-radius: 10px;
   margin: 0 152px 0 0;
-  padding: 1px;
+  padding: 2px 0 2px 10px;
   border: 1px solid rgb(212, 212, 212);
   width: 49px;
 }
